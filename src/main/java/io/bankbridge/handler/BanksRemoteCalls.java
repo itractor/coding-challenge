@@ -1,10 +1,10 @@
 package io.bankbridge.handler;
-import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import spark.Request;
 import spark.Response;
+
+import java.util.Map;
 
 public class BanksRemoteCalls {
 

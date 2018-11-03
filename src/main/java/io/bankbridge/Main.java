@@ -1,9 +1,10 @@
 package io.bankbridge;
-import static spark.Spark.get;
-import static spark.Spark.port;
 
 import io.bankbridge.handler.BanksCacheBased;
 import io.bankbridge.handler.BanksRemoteCalls;
+
+import static spark.Spark.get;
+import static spark.Spark.port;
 
 public class Main {
 

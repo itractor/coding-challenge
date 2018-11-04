@@ -33,7 +33,6 @@ public class BanksRemoteCalls {
 				.readValue(Thread.currentThread().getContextClassLoader().getResource("banks-v2.json"), HashMap.class);
         client  = new OkHttpClient();
 
-        System.out.println(config.values() + "" + config.keySet());
 	}
 	public static String handle(Request request, Response response){
 
@@ -42,7 +41,15 @@ public class BanksRemoteCalls {
 	        System.out.println(k + ""+ v);
             try {
                 JSONObject jsonObject = new JSONObject(run(v.toString()));
-                jsonArray.put(jsonObject);
+                JSONObject filteredJsonObject = new JSONObject();
+                if (jsonObject.has("name")) {
+                    filteredJsonObject.put("name", jsonObject.get("name"));
+                }
+                if (jsonObject.has("bic")) {
+                    filteredJsonObject.put("id", jsonObject.get("bic"));
+                }
+                //TODO what to do if bic or name does not exist?
+                jsonArray.put(filteredJsonObject);
             } catch (IOException e) {
                 e.printStackTrace();
             }

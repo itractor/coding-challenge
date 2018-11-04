@@ -23,6 +23,7 @@ public class BankCacheBasedTest extends CoreFunctionalityTest{
         assertTrue(
                 given().when().get("/v1/banks/all").then()
                         .extract().jsonPath().getString("[0].name").equals("Credit Sweets")
+                //TODO since the order could change in a real environment, find a better way to test
         );
     }
 
@@ -34,6 +35,7 @@ public class BankCacheBasedTest extends CoreFunctionalityTest{
         assertTrue(
                 given().when().get("/v1/banks/all").then()
                         .extract().jsonPath().getString("[0].id").equals("5678")
+                //TODO since the order could change in a real environment, find a better way to test
         );
     }
 

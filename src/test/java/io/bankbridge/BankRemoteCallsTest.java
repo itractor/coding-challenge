@@ -23,7 +23,8 @@ public class BankRemoteCallsTest extends CoreFunctionalityTest{
     public void verifyName() {
         assertTrue(
                 given().when().get("/v2/banks/all").then()
-                        .extract().jsonPath().getString("[0].name").equals("Royal Bank of Boredom")
+                        .extract().jsonPath().getString("[0].name").equals("Banco de espiritu santo")
+                //TODO since the order could change in a real environment, find a better way to test
         );
     }
 
@@ -34,7 +35,8 @@ public class BankRemoteCallsTest extends CoreFunctionalityTest{
     public void verifyId() {
         assertTrue(
                 given().when().get("/v2/banks/all").then()
-                        .extract().jsonPath().getString("[0].id").equals("5678")
+                        .extract().jsonPath().getString("[1].id").equals("5678")
+                //TODO since the order could change in a real environment, find a better way to test
         );
     }
 

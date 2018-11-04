@@ -42,3 +42,6 @@ and for each bank retrieve the data from the remote URL specified. You will need
 You can find the mock implementation for the remote URLs in the MockRemotes class. 
 
 Feel free to add comments to the code to clarify the changes you are making.
+
+## Comments from Øystein
+Comments marked as TODO are changes i would have implemented after feedback.

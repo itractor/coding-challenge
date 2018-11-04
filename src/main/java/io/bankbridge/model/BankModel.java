@@ -1,7 +1,8 @@
 package io.bankbridge.model;
 
 public class BankModel {
-	
+
+	//Changed from public to private. Variables should NEVER be public
 	private String bic;
 	private String name;
 	private String countryCode;

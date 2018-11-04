@@ -27,7 +27,7 @@ public class BankCacheBasedTest extends CoreFunctionalityTest{
     }
 
     /**
-     * Test that name exists
+     * Test that id exists
      */
     @Test
     public void verifyId() {

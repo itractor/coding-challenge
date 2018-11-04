@@ -23,12 +23,12 @@ public class BankRemoteCallsTest extends CoreFunctionalityTest{
     public void verifyName() {
         assertTrue(
                 given().when().get("/v2/banks/all").then()
-                        .extract().jsonPath().getString("[0].name").equals("Credit Sweets")
+                        .extract().jsonPath().getString("[0].name").equals("Royal Bank of Boredom")
         );
     }
 
     /**
-     * Test that name exists
+     * Test that id exists
      */
     @Test
     public void verifyId() {

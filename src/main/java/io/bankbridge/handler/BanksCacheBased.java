@@ -32,8 +32,8 @@ public class BanksCacheBased {
 		try {
 			BankModelList models = new ObjectMapper().readValue(
 					Thread.currentThread().getContextClassLoader().getResource("banks-v1.json"), BankModelList.class);
-			for (BankModel model : models.banks) {
-				cache.put(model.bic, model.name);
+			for (BankModel model : models.getBanks()) {
+				cache.put(model.getBic(), model.getName());
 			}
 		} catch (Exception e) {
 			throw e;
